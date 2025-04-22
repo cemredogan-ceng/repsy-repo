@@ -1,4 +1,4 @@
-package com.repsy.repsyrepo.model;
+package com.repsy.model;
 
 import lombok.Data;
 import java.util.List;
@@ -16,3 +16,4 @@ public class MetaData {
         private String version;
     }
 }
+
