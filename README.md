@@ -5,6 +5,12 @@ It implements a custom Maven repository manager for a fictional programming lang
 
 ---
 
+## Badge
+![Java](https://img.shields.io/badge/Java-17-blue)
+![SpringBoot](https://img.shields.io/badge/SpringBoot-3.4.4-brightgreen)
+![Maven](https://img.shields.io/badge/Maven-Build-orange)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
+
 ##  Tech Stack
 
 - Java 17  
@@ -60,6 +66,25 @@ src/ ├── main/ │ ├── java/com/repsy/ │ │ ├── controller/
 
 4.**API Access**
 http://localhost:8080/api/repsy
+
+
+
+##  API Test Examples (with curl)
+
+### Upload `.jar` File
+
+curl -X POST http://localhost:8080/api/repsy/upload \
+  -F "file=@path/to/artifact.jar" \
+  -F "groupId=com.example" \
+  -F "artifactId=demo-lib" \
+  -F "version=1.0.0"
+
+
+
+## Download Artifact
+curl -X GET "http://localhost:8080/api/repsy/download?groupId=com.example&artifactId=demo-lib&version=1.0.0"
+
+
 
 
 ## Author
